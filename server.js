@@ -16,11 +16,12 @@ app.get('/',(req,res)=>{
 
    res.json({success:true});
 
+
 });
 
 
 
-app.listen(PORT,()=>{
+app.listen(process.env.PORT,()=>{
   
    console.log('Servidor On');
 
