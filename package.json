@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-
-    "device": "nodemon server.js",
+    "backend": "node server.js",
+    "frontend": "cd frontend && npm start",
+    "device": "concurrently  \"npm run backend\"  \"npm run frontend\"  ",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
@@ -14,6 +15,7 @@
   "description": "Sistema de Monitoramento de Dispositivos",
   "dependencies": {
     "body-parser": "^2.2.0",
+    "concurrently": "^9.2.0",
     "dotenv": "^17.2.0",
     "express": "^5.1.0",
     "mongoose": "^8.16.4",
@@ -23,9 +25,7 @@
   "devDependencies": {
     "nodemon": "^3.1.10"
   },
-
-   "engines": {
+  "engines": {
     "node": "22.x"
   }
-
 }
