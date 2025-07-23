@@ -20,17 +20,18 @@ PORT = 3080;
 }); */
 
 
-if(process.env.NODE_ENV==='development'){
 
-   app.use(express.static('frontend/build'));
-   const path = require('path');
+// Todo código precisa ficar depois das rotas conhecidas
+if(process.env.NODE_ENV === 'production'){
 
-   app.get('*',(req,res)=>{
+    app.use(express.static('frontend/build'))
 
-      res.sendFile(path.resolve(__dirname,'frontend','build','index.html'));
-   });
-
+    const path = require('path')
+    app.get('*', (req, res)=>{
+        res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'))
+    })
 }
+
 
 app.listen(process.env.PORT,()=>{
   
