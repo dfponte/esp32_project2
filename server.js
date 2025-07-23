@@ -21,7 +21,7 @@ PORT = 3080;
 
 //'development'
 
-if(process.env.NODE_ENV==='production'){
+if(process.env.NODE_ENV==='development'){
 
    app.use(express.static('frontend/build'));
    const path = require('path');
