@@ -7,7 +7,8 @@
     "frontend": "cd frontend && npm start",
     "device": "concurrently  \"npm run backend\"  \"npm run frontend\"  ",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "heroku-postbuild":"npm install --prefix frontend && npm run build --prefix frontend"
   },
   "keywords": [],
   "author": "",
@@ -20,7 +21,8 @@
     "express": "^5.1.0",
     "mongoose": "^8.16.4",
     "slug": "^11.0.0",
-    "slugify": "^1.6.6"
+    "slugify": "^1.6.6",
+    "styled-components": "^6.1.19"
   },
   "devDependencies": {
     "nodemon": "^3.1.10"
