@@ -3,12 +3,10 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "backend": "node server.js",
-    "frontend": "cd frontend && npm start",
+    "backend": "nodemon server.js",
+    "frontend": "npm start --prefix frontend",
     "device": "concurrently  \"npm run backend\"  \"npm run frontend\"  ",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "NODE_ENV=localhost && node server.js",
-    "production":"NODE_ENV=production && npm run server.js",
+    "start": "node server.js",
     "heroku-postbuild":"npm install --prefix frontend && npm run build --prefix frontend"
   },
   "keywords": [],

@@ -19,10 +19,6 @@ PORT = 3080;
 
 }); */
 
-//'development'
-
-const nodeEnv = process.env.NODE_ENV || 'development';
-console.log(nodeEnv); // Output: 'development'
 
 if(process.env.NODE_ENV==='production'){
 
