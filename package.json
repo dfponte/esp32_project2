@@ -7,7 +7,8 @@
     "frontend": "cd frontend && npm start",
     "device": "concurrently  \"npm run backend\"  \"npm run frontend\"  ",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
+    "start": "NODE_ENV=localhost && node server.js",
+    "production":"NODE_ENV=production && npm run server.js",
     "heroku-postbuild":"npm install --prefix frontend && npm run build --prefix frontend"
   },
   "keywords": [],
