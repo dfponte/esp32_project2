@@ -18,7 +18,9 @@ PORT = 3080;
 
 }); */
 
-if(process.env.NODE_ENV==='production'){
+
+
+if(process.env.NODE_ENV==='development'){
    app.use(express.static('/frontend/build'));
    const path = require('path');
 
@@ -32,6 +34,7 @@ if(process.env.NODE_ENV==='production'){
 app.listen(process.env.PORT,()=>{
   
    console.log('Servidor On');
+   console.log(process.env.NODE_ENV);
 
 });
 
