@@ -6,6 +6,7 @@ const app = express();
 app.use(bodyParser.json());
 
 
+
 const api = require('./rotas/');
 app.use('/api',api);
 PORT = 3080;
@@ -21,7 +22,7 @@ PORT = 3080;
 
 
 if(process.env.NODE_ENV==='development'){
-   app.use(express.static('/frontend/build'));
+   app.use(express.static('frontend/build'));
    const path = require('path');
 
    app.get('*',(req,res)=>{
