@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "backend": "nodemon server.js",
+    "backend": "node server.js",
     "frontend": "npm start --prefix frontend",
     "device": "concurrently  \"npm run backend\"  \"npm run frontend\"  ",
     "start": "node server.js",
